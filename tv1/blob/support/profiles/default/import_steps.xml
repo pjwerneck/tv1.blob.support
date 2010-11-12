@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<import-steps>
+ <import-step id="tv1.blob.support-upgrades" version="20100413-01"
+              handler="tv1.blob.support.setuphandlers.doUpgrades"
+              title="Do upgrades">
+  <dependency step="plone_content" />
+  Do upgrades
+ </import-step>
+</import-steps>
