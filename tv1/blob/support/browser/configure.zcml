@@ -7,5 +7,12 @@
     i18n_domain="tv1.blob.support">
 
   <!-- -*- extra stuff goes here -*- -->
+
+  <browser:page
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      name="blob-newsitem-migration"
+      template="migration.pt"
+      class="tv1.blob.support.browser.newsitem.NewsItemMigrationView"
+      permission="cmf.ManagePortal" />
     
 </configure>
