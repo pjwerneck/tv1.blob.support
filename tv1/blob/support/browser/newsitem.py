@@ -3,7 +3,7 @@
 from plone.app.blob.migrations import haveContentMigrations
 
 from plone.app.blob.browser.migration import BlobMigrationView
-from tv1.blob.support.migration import migrateNewsItem, getNewsItemMigrationWalker
+from tv1.blob.support.migration.newsitem import migrateNewsItem, getNewsItemMigrationWalker
 from Acquisition import aq_inner
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone import PloneMessageFactory as _

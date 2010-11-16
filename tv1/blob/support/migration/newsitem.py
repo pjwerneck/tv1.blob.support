@@ -15,14 +15,23 @@ class NewsItemToBlobImageMigrator(ATFileToBlobMigrator):
     }
 
     def migrate_data(self):
+        #import pdb; pdb.set_trace()
+        #self.new.getField('text').getMutator(self.new)(self.old.getField('text').get(self.old), text_format='text/html')
+
+        self.new.getField('text').setContentType(self.new, 'text/html')
+
+        
         if self.old.schema['image']:
-            value = self.old.schema['image'].get(self.old)
+            oldfield = self.old.schema['image']
+            value = oldfield.get(self.old)
+                
             if value:
                 self.new.getField('image').getMutator(self.new)(value)
-                oldfield = self.old.schema['image']
                 if hasattr(oldfield, 'removeScales'):
                     # clean up old image scales
-                    oldfield.removeScales(self.old)                
+                    oldfield.removeScales(self.old)
+
+            
 
 def getNewsItemMigrationWalker(self):
     return getMigrationWalker(self, migrator=NewsItemToBlobImageMigrator)
