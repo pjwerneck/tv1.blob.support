@@ -16,20 +16,19 @@ from zope.publisher.interfaces.http import IHTTPRequest
 from ZPublisher.BaseRequest import DefaultPublishTraverse
 from Products.validation import V_REQUIRED
 
-from Products.ATContentTypes.interfaces import IATNewsItem
 
 from zope.interface import Interface
 
+from tv1.app.chamadas.interfaces import IChamada
 from blobfield import ExtensionImageBlobField
 
 
-class INewsItem(Interface):
-    pass
+#class IChamada(Interface):
+#    pass
 
 
-
-class NewsItemExtender(object):
-    adapts(INewsItem)
+class ChamadaExtender(object):
+    adapts(IChamada)
     implements(ISchemaExtender)
 
     fields = [ExtensionImageBlobField('image',
@@ -41,5 +40,6 @@ class NewsItemExtender(object):
     def __init__(self, context):
         self.context = context
 
+        
     def getFields(self):
         return self.fields

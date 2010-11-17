@@ -37,4 +37,9 @@
 	     zcml:condition="installed plone.app.blob"
 	     provides="archetypes.schemaextender.interfaces.IOrderableSchemaExtender" />
 
+    <!-- Chamada -->
+    <adapter factory=".extender.chamada.ChamadaExtender"
+	     zcml:condition="installed tv1.app.chamadas"
+	     provides="archetypes.schemaextender.interfaces.IOrderableSchemaExtender" />
+
 </configure>
