@@ -42,4 +42,9 @@
 	     zcml:condition="installed tv1.app.chamadas"
 	     provides="archetypes.schemaextender.interfaces.IOrderableSchemaExtender" />
 
+    <!-- SuperFile -->
+    <adapter factory=".extender.superfile.SuperFileExtender"
+	     zcml:condition="installed brasil.superfile"
+	     provides="archetypes.schemaextender.interfaces.IOrderableSchemaExtender" />
+
 </configure>

@@ -22,4 +22,11 @@
       class="tv1.blob.support.browser.chamada.ChamadaMigrationView"
       permission="cmf.ManagePortal" />
     
+  <browser:page
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      name="blob-superfile-migration"
+      template="migration.pt"
+      class="tv1.blob.support.browser.superfile.SuperFileMigrationView"
+      permission="cmf.ManagePortal" />
+    
 </configure>
