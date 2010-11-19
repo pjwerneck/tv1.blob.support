@@ -29,4 +29,18 @@
       class="tv1.blob.support.browser.superfile.SuperFileMigrationView"
       permission="cmf.ManagePortal" />
     
+  <browser:page
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      name="blob-googlevideo-migration"
+      template="migration.pt"
+      class="tv1.blob.support.browser.googlevideo.GoogleVideoMigrationView"
+      permission="cmf.ManagePortal" />
+    
+  <browser:page
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      name="blob-artista-migration"
+      template="migration.pt"
+      class="tv1.blob.support.browser.artista.ArtistaMigrationView"
+      permission="cmf.ManagePortal" />
+    
 </configure>

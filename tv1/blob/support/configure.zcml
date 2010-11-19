@@ -47,4 +47,16 @@
 	     zcml:condition="installed brasil.superfile"
 	     provides="archetypes.schemaextender.interfaces.IOrderableSchemaExtender" />
 
+    <!-- GoogleVideo -->
+    <adapter factory=".extender.googlevideo.GoogleVideoExtender"
+	     zcml:condition="installed Products.ATGoogleVideo"
+	     provides="archetypes.schemaextender.interfaces.IOrderableSchemaExtender" />
+
+    <!-- Artista -->
+    <adapter factory=".extender.artista.ArtistaExtender"
+	     zcml:condition="installed brasil.app.galeriadearte"
+	     provides="archetypes.schemaextender.interfaces.IOrderableSchemaExtender" />
+
+
+
 </configure>
